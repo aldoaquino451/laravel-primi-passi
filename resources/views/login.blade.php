@@ -8,22 +8,25 @@
     <title>Laravel Primo Progetto</title>
 </head>
 
-<body>
+<body style="margin:0; min-height: 100vh">
 
-    <header>
+    <header style="padding:20px; background-color:lightblue">
         <ul style="display:flex; gap:20px;">
-            <li style="list-style: none">
-                <a href="/"> home</a>
-            </li>
-            <li style="list-style: none">
-                <a href="/login"> login</a>
-            </li>
-            <li style="list-style: none">
-                <a href="/contacts">contacts </a>
-            </li>
+            @foreach ($menu as $item)
+                <li style="list-style: none">
+                    <a style="color:lightslategrey" href="{{ $item['link'] }}">
+                        {{ $item['title'] }}
+                    </a>
+                </li>
+            @endforeach
         </ul>
     </header>
-    <h1>Login</h1>
+
+    <h1 style="margin:50px">{{ $menu[1]['title'] }}</h1>
+
+    <p style="margin:50px">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus modi eveniet
+        voluptatibus tempore corrupti dignissimos sunt ea ratione debitis excepturi. Itaque deleniti eos placeat, iure
+        adipisci quaerat beatae assumenda explicabo!</p>
 
 </body>
 

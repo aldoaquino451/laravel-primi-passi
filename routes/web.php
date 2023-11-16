@@ -14,14 +14,55 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $menu = ['home', 'login', 'contacts'];
+    $menu = [
+        [
+            "title" => 'Home',
+            "link" => '/'
+        ],
+        [
+            'title'=> 'Login',
+            'link'=> '/login'
+        ],
+        [
+            'title'=> 'Contatti',
+            'link'=> '/contacts'
+        ]
+    ];
     return view('home', compact('menu'));
 });
+
 Route::get('/login', function () {
-    $menu = ['home', 'login', 'contacts'];
+    $menu = [
+        [
+            "title" => 'Home',
+            "link" => '/'
+        ],
+        [
+            'title'=> 'Login',
+            'link'=> '/login'
+        ],
+        [
+            'title'=> 'Contatti',
+            'link'=> '/contacts'
+        ]
+    ];
     return view('login', compact('menu'));
 });
+
 Route::get('/contacts', function () {
-    $menu = ['home', 'login', 'contacts'];
+    $menu = [
+        [
+            "title" => 'Home',
+            "link" => '/'
+        ],
+        [
+            'title'=> 'Login',
+            'link'=> '/login'
+        ],
+        [
+            'title'=> 'Contatti',
+            'link'=> '/contacts'
+        ]
+    ];
     return view('contacts', compact('menu'));
 });
