@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $saluto = 'Hello World!!';
+    $menu = ['home', 'contact', 'login'];
+    return view('home', compact('saluto', 'menu'));
+});
+Route::get('/login', function () {
+    $saluto = 'Hello World!!';
+    $menu = ['home', 'contact', 'login'];
+    return view('login', compact('saluto', 'menu'));
+});
+Route::get('/contacts', function () {
+    $saluto = 'Hello World!!';
+    $menu = ['home', 'contacts', 'login'];
+    return view('contacts', compact('saluto', 'menu'));
 });
