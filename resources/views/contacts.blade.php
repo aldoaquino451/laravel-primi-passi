@@ -16,10 +16,10 @@
                 <a href="/"> home</a>
             </li>
             <li style="list-style: none">
-                <a href="/login"> login</a>
+                <a href="/{{ $menu[1] }}"> login</a>
             </li>
             <li style="list-style: none">
-                <a href="/contacts">contacts </a>
+                <a href="/{{ $menu[2] }}">contacts </a>
             </li>
         </ul>
     </header>
