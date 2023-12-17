@@ -10,17 +10,7 @@
 
 <body style="margin:0; min-height: 100vh">
 
-    <header style="padding:20px; background-color:lightblue">
-        <ul style="display:flex; gap:20px">
-            @foreach ($menu as $item)
-                <li style="list-style: none">
-                    <a style="color:lightslategrey" href="{{ $item['link'] }}">
-                        {{ $item['title'] }}
-                    </a>
-                </li>
-            @endforeach
-        </ul>
-    </header>
+    @include('partials/menu')
 
     <h1 style="margin:50px">{{ $menu[2]['title'] }}</h1>
 

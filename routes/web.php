@@ -14,55 +14,58 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $menu = [
-        [
-            "title" => 'Home',
-            "link" => '/'
-        ],
-        [
-            'title'=> 'Login',
-            'link'=> '/login'
-        ],
-        [
-            'title'=> 'Contatti',
-            'link'=> '/contacts'
-        ]
-    ];
-    return view('home', compact('menu'));
-});
+  $menu = [
+    [
+      "title" => 'Home',
+      "link" => '/'
+    ],
+    [
+      'title' => 'Login',
+      'link' => '/login'
+    ],
+    [
+      'title' => 'Contatti',
+      'link' => '/contacts'
+    ]
+  ];
+
+  return view('home', compact('menu'));
+})->name('home');
 
 Route::get('/login', function () {
-    $menu = [
-        [
-            "title" => 'Home',
-            "link" => '/'
-        ],
-        [
-            'title'=> 'Login',
-            'link'=> '/login'
-        ],
-        [
-            'title'=> 'Contatti',
-            'link'=> '/contacts'
-        ]
-    ];
-    return view('login', compact('menu'));
-});
+  $menu = [
+    [
+      "title" => 'Home',
+      "link" => '/'
+    ],
+    [
+      'title' => 'Login',
+      'link' => '/login'
+    ],
+    [
+      'title' => 'Contatti',
+      'link' => '/contacts'
+    ]
+  ];
+
+  return view('login', compact('menu'));
+})->name('login');
 
 Route::get('/contacts', function () {
-    $menu = [
-        [
-            "title" => 'Home',
-            "link" => '/'
-        ],
-        [
-            'title'=> 'Login',
-            'link'=> '/login'
-        ],
-        [
-            'title'=> 'Contatti',
-            'link'=> '/contacts'
-        ]
-    ];
-    return view('contacts', compact('menu'));
-});
+  $menu = [
+    [
+      "title" => 'Home',
+      "link" => '/'
+    ],
+    [
+      'title' => 'Login',
+      'link' => '/login'
+    ],
+    [
+      'title' => 'Contatti',
+      'link' => '/contacts'
+    ]
+  ];
+
+  return view('contacts', compact('menu'));
+})->name('contacts');
